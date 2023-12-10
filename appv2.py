@@ -130,8 +130,7 @@ Age = st.number_input(label="What is your age",
 #Making predictions 
 ##New data for features: age, college, high_income, ideology
 person = [{income}, {education}, {parent}, {marital},{gender},{age}]
-##Predict class, given input features
-predicted_class = lr.predict([person])
+
 ##Generate probability of positive class (=1)
 probs = lr.predict_proba([person])
 
