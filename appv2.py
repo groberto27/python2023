@@ -44,7 +44,17 @@ age=st.slider('What is age',0,98)
 
 
 # Create labels from numeric inputs
- # Income
+# Income
+Income = st.selectbox("Income", 
+             options = ["Less than $10,000",
+                       "10 to under $20,000",
+                        "20 to under $30,000",
+                        "30 to under $40,000",
+                        "40 to under $50,000",
+                        "50 to under $75,000",
+                        "75 to under $100,000",
+                        "100 to under $150,000",
+                        "$150,000 +"])
 if income == 1:
     inc_label = "Less than $10,000"
 elif income == 2:
