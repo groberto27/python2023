@@ -35,7 +35,7 @@ lr.fit(X,y)
 y_pred = lr.predict(X)
 
 # Income
-income = st.selectbox("Income", 
+income = st.selectbox("Current income level", 
              options = ["Less than $10,000",
                        "10 to under $20,000",
                         "20 to under $30,000",
@@ -45,7 +45,6 @@ income = st.selectbox("Income",
                         "75 to under $100,000",
                         "100 to under $150,000",
                         "$150,000 +"])
-st.write(f"Income (pre-conversion): {income}")
 if income == "Less than $10,000":
     income = 1
 elif income == "10 to under $20,000":
@@ -64,10 +63,10 @@ elif income == "100 to under $150,000":
     income = 8    
 else:
     income  = 9 
-st.write(f"Income (post-conversion): {income}")
+
 
 # Education
-education = st.selectbox("Education level", 
+education = st.selectbox("What is the highest level of education/ degree? ", 
              options = ["Less than high school",
                        "Some high high school",
                         "High school graduate/ GED",
@@ -76,7 +75,6 @@ education = st.selectbox("Education level",
                         "Four-year college/ Bachelors",
                         "Some post-graduate or professional schooling",
                         "Graduate or professional degree (MA, MS, Phd, MD, JD, others"])
-st.write(f"Income (pre-conversion): {education}")
 if education == "Less than high school":
     education = 1
 elif education == "Some high high school":
@@ -93,33 +91,34 @@ elif education == "Some post-graduate or professional schooling":
     education = 7
 else:
     education = 8
-st.write(f"Income (post-conversion): {education}")
 
 marital=st.number_input('What is your current marital status',1,6)
 parent=st.slider('Do you have children',0,1)
 gender=st.slider('Gender',0,1)
 age=st.slider('What is age',0,98)
 
-# Create labels from numeric inputs
-
-
-
-
-
 
 # Marital
-if marital == 1:
-    mar_label = "Married"
-elif marital == 2:
-    mar_label = "Living with a partner"
-elif marital == 3:
-    mar_label = "Divorced"
-elif marital == 4:
-    mar_label = "Separated"
-elif marital == 5:
-    mar_label = "Never been married/ Single"
+marital = st.selectbox("Marital status?", 
+             options = ["Married",
+                       "Living with a partner",
+                        "Divorced",
+                        "Some college",
+                        "Separated",
+                        "Widowed",
+                        "Never been married/ Single"])
+if marital == "Married":
+    marital = 1
+elif marital == "Living with a partner:
+   marital = 2
+elif marital == "Divorced":
+   marital = 3
+elif marital == "Separated":
+    mar_label =4
+elif marital ==  "Widowed":
+    marital = 5
 else:
-    mar_label = "Widowed"
+    marital = 6
 
 #Parent
 parent = st.slider(label="Are you a parent of a child under 18 living in your home? (0 Yes, 1 No)", 
