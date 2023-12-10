@@ -9,8 +9,8 @@ header=st.container()
 features=st.container()
 
 with header:
-    st.title ("Do you use LinkedIn?")
-    st.subtitle ("Please provide some general information about yourself and we will predict if you're a LinkedIn user or not")
+    st.header ("Do you use LinkedIn?")
+    st.subheader ("Please provide some general information about yourself and we will predict if you're a LinkedIn user or not")
     st.text ("***All information collected is purely for educational purposes***")
     ss=pd.read_csv("ss.csv")
     ss = ss.dropna()
