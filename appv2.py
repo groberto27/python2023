@@ -13,7 +13,7 @@ st.markdown(
     """
     <style>
     .main{
-    background-color:"slategrey";
+    background-color:"#F0FFFF";
     }
     </style>
     """,
