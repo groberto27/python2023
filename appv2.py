@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 
 header=st.container()
 features=st.container()
-st.image("li.jpg")
+st.image(li.jpg)
 
 
 
