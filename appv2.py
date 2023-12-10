@@ -109,13 +109,13 @@ marital = st.selectbox("Marital status?",
                         "Never been married/ Single"])
 if marital == "Married":
     marital = 1
-elif marital == "Living with a partner:
+elif marital == "Living with a partner":
    marital = 2
 elif marital == "Divorced":
    marital = 3
 elif marital == "Separated":
     mar_label =4
-elif marital ==  "Widowed":
+elif marital == "Widowed":
     marital = 5
 else:
     marital = 6
