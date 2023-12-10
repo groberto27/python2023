@@ -142,7 +142,7 @@ age = st.number_input(label="What is your age",
 #    "marital":    [],     #binary 0, 1
 #    "gender":     [],     #binary 0, 1
 #    "age":        [],   #continuous through 98
-})
+#})
 
 # Use model to make predictions
 #newdata["prediction_sm_li"] = lr.predict(newdata)
