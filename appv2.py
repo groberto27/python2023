@@ -132,7 +132,7 @@ age = st.number_input(label="What is your age",
 person = [{income}, {education}, {parent}, {marital},{gender},{age}]
 
 ##Generate probability of positive class (=1)
-probs = lr.predict_proba([person])
+probs = lr.predict_proba([person],action="ignore")
 
 
 ##Print predicted probability
