@@ -7,13 +7,13 @@ from sklearn.linear_model import LogisticRegression
 
 header=st.container()
 features=st.container()
-st.image('li.jpg',caption="xx")
+st.image('li.jpg',caption="Image Source: LinkedIn")
 
 
 
 
 with header:
-    st.header ("Do you use LinkedIn?","<h1 style='text-align: center; color: grey;'>Big headline</h1>")
+    st.header ("Do you use LinkedIn?",h1 style='text-align: center; color: grey;'>Big headline</h1>)
     st.subheader ("Please provide some general information about yourself and we will predict if you're a LinkedIn user or not")
     st.text ("***All information collected is purely for educational purposes***")
     ss=pd.read_csv("ss.csv")
