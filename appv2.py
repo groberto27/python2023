@@ -12,11 +12,7 @@ st.image('li.jpg',caption="Image Source: LinkedIn")
 with header:
     st.header ("Do you use LinkedIn?")
     st.subheader ("Let's predict if you're a LinkedIn user or not!")
-    st.text ("***All information collected is purely for educational purposes***")
 
-  
-
-    
 #from dataframe ss: y as sm_li; x as income, education, parent, marital, gender, age
 ss=pd.read_csv("ss.csv")
 ss = ss.dropna()
