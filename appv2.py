@@ -21,15 +21,14 @@ st.markdown(
 )
 
 with header:
-st.markdown(
-    """
-    <h1 align="center">
-    Do you use LinkedIn?
-    </h1>
-    """,
-    unsafe_allow_html=True
-)
-
+    st.markdown(
+        """
+        <h1 align="center">
+        Do you use LinkedIn?
+        </h1>
+        """,
+        unsafe_allow_html=True
+    )
     st.subheader ("Let's predict if you're a user or not!")
 
 def get_data():
