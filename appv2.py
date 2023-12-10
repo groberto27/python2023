@@ -128,12 +128,19 @@ age = st.number_input(label="What is your age",
 
 
 #Making predictions 
-##New data for features: age, college, high_income, ideology
-person = [{income}, {education}, {parent}, {marital},{gender},{age}]
-person
+# New data for predictions
+newdata = pd.DataFrame({
+    "income":     [],     #between 1  to 9
+    "education":  [],     #between 1  to 8
+    "parent":     [],     #binary 0, 1
+    "marital":    [],     #binary 0, 1
+    "gender":     [],     #binary 0, 1
+    "age":        [],   #continuous through 98
+})
 
-##Generate probability of positive class (=1)
-#probs = lr.predict_proba([person])
+# Use model to make predictions
+newdata["prediction_sm_li"] = lr.predict(newdata)
+
 
 ##Print predicted probability
 #st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
