@@ -29,7 +29,14 @@ with header:
         """,
         unsafe_allow_html=True
     )
-    st.subheader ("Let's predict if you're a user or not!")
+    st.markdown(
+        """
+        <h2 align="center">
+        Let's predict if you're a user or not!
+        </h2>
+        """,
+        unsafe_allow_html=True
+    )
 
 def get_data():
     ss=pd.read_csv("ss.csv")
