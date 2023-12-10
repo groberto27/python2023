@@ -125,6 +125,11 @@ age = st.number_input(label="What is your age",
            max_value=98,
            value=45,placeholder="type a number...")
 
+# run block of code and catch warnings
+with warnings.catch_warnings():
+ # ignore all caught warnings
+ warnings.filterwarnings("ignore")
+ # execute code that will generate warnings
 
 
 #Making predictions 
@@ -132,7 +137,7 @@ age = st.number_input(label="What is your age",
 person = [{income}, {education}, {parent}, {marital},{gender},{age}]
 
 ##Generate probability of positive class (=1)
-probs = lr.predict_proba([person],action="ignore")
+probs = lr.predict_proba([person])
 
 
 ##Print predicted probability
