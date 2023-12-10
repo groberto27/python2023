@@ -125,11 +125,6 @@ age = st.number_input(label="What is your age",
            max_value=98,
            value=45,placeholder="type a number...")
 
-# run block of code and catch warnings
-with warnings.catch_warnings():
- # ignore all caught warnings
- warnings.filterwarnings("ignore")
- # execute code that will generate warnings
 
 
 #Making predictions 
@@ -138,8 +133,8 @@ person = [{income}, {education}, {parent}, {marital},{gender},{age}]
 
 ##Generate probability of positive class (=1)
 with warnings.catch_warnings():
-probs = lr.predict_proba([person])
- warnings.filterwarnings("ignore")
+    probs = lr.predict_proba([person])
+    warnings.filterwarnings("ignore")
 
 ##Print predicted probability
 st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
