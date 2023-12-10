@@ -20,6 +20,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+with header:
 st.markdown(
     """
     <h1 align="center">
@@ -29,8 +30,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-with header:
-    st.header ("Do you use LinkedIn?")
     st.subheader ("Let's predict if you're a user or not!")
 
 def get_data():
