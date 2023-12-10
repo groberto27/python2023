@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+from streamlit_option_menu import option_menu
 from sklearn.linear_model import LogisticRegression
 
 
@@ -11,10 +12,9 @@ features=st.container()
 with header:
     st.title ("Welcome to Genesis' LinkedIn user predictor")
     st.text ("In this website, you will be provide your input and we will predict if you use LinkedIn or not")
-
-    ss=pd.read_csv("part2_ss_appfile.csv")
+    ss=pd.read_csv("ss.csv")
     ss = ss.dropna()
-    ss.info
+
 
 
 with features: 
