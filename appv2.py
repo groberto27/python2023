@@ -23,8 +23,7 @@ st.markdown(
 st.markdown(
     """
     <h1 align="center">
-    Centered Heading
-    }
+    Do you use LinkedIn?
     </h1>
     """,
     unsafe_allow_html=True
