@@ -44,6 +44,7 @@ Income = st.selectbox("Income",
                         "75 to under $100,000",
                         "100 to under $150,000",
                         "$150,000 +"])
+st.write(f"Income (pre-conversion): {Income}")
 if income == "Less than $10,000":
     income = 1
 elif income == "10 to under $20,000":
@@ -62,6 +63,8 @@ elif income == "100 to under $150,000":
     income = 8    
 else:
     income  = 9 
+st.write(f"Income (post-conversion): {Income}")
+
 education=st.number_input('What is the highest level of education',1,8)
 marital=st.number_input('What is your current marital status',1,6)
 parent=st.slider('Do you have children',0,1)
