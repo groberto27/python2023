@@ -9,13 +9,19 @@ header=st.container()
 features=st.container()
 st.image('li.jpg',caption="Image Source: LinkedIn")
 
+
 with header:
     st.header ("Do you use LinkedIn?")
     st.subheader ("Let's predict if you're a user or not!")
 
+def get_data():
+    ss=pd.read_csv("ss.csv")
+    ss = ss.dropna()
+    return ss
+    
 #from dataframe ss: y as sm_li; x as income, education, parent, marital, gender, age
-ss=pd.read_csv("ss.csv")
-ss = ss.dropna()
+ss= get_data()
+
 y = ss["sm_li"]
 X = ss[["income", "education", "parent", "marital","gender","age"]]
 lr= LogisticRegression(class_weight="balanced").fit(X,y)
