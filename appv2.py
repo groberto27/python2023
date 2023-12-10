@@ -135,6 +135,5 @@ person = [{income}, {education}, {parent}, {marital},{gender},{age}]
 probs = lr.predict_proba([person])
 
 
-##Print predicted class and probability
-st.write(f"Predicted class: {predicted_class[0]}") # 0=Doesn't use LinkedIn, 1=Uses LinkedIN
-st.write(f"Probability that this person is LinkedIn user: {probs[0][1]}")
+##Print predicted probability
+st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
