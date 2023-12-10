@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 
 header=st.container()
 features=st.container()
-st.image(https://gadgetstouse.com/wp-content/uploads/2022/07/woman-linkedin-profile-scaled-1-scaled.jpg)
+st.image(https://github.com/groberto27/python2023/blob/main/woman-linkedin-profile-scaled-1-scaled.jpg)
 
 
 
