@@ -34,6 +34,12 @@ lr= LogisticRegression(class_weight="balanced").fit(X,y)
 lr.fit(X,y)
 y_pred = lr.predict(X)
 
+income = st.number_input("Income (low=1 to high=9)", 1, 9)
+education=st.number_input('What is the highest level of education',1,8)
+marital=st.number_input('What is your current marital status',1,6)
+parent=st.slider('Do you have children',0,1)
+gender=st.slider('Gender',0,1)
+age=st.slider('What is age',0,98)
 
 # Create labels from numeric inputs
 # Income
