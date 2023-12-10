@@ -35,7 +35,6 @@ lr.fit(X,y)
 y_pred = lr.predict(X)
 
  
-with st.sidebar:
     income = st.number_input("Income (low=1 to high=9)", 1, 9)
     education=st.number_input('What is the highest level of education',1,8)
     marital=st.number_input('What is your current marital status',1,6)
