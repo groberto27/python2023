@@ -23,7 +23,7 @@ st.markdown(
 with header:
     st.markdown(
         """
-        <h1 align="center";
+        <style="color:red; text-align:center;"
         style="color:red">
         Do you use LinkedIn?
         </h1>
