@@ -9,6 +9,16 @@ header=st.container()
 features=st.container()
 st.image('li.jpg',caption="Image Source: LinkedIn")
 
+st.markdown(
+    """
+    <style>
+    .main{
+    background-color:#F5f5f5;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 with header:
     st.header ("Do you use LinkedIn?")
