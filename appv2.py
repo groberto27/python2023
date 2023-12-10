@@ -130,12 +130,12 @@ age = st.number_input(label="What is your age",
 #Making predictions 
 # New data for predictions
 #newdata = pd.DataFrame({
-    "income":     [],     #between 1  to 9
-    "education":  [],     #between 1  to 8
-    "parent":     [],     #binary 0, 1
-    "marital":    [],     #binary 0, 1
-    "gender":     [],     #binary 0, 1
-    "age":        [],   #continuous through 98
+ #   "income":     [],     #between 1  to 9
+#    "education":  [],     #between 1  to 8
+#    "parent":     [],     #binary 0, 1
+#    "marital":    [],     #binary 0, 1
+#    "gender":     [],     #binary 0, 1
+#    "age":        [],   #continuous through 98
 })
 
 # Use model to make predictions
@@ -152,7 +152,7 @@ age = st.number_input(label="What is your age",
         multiclass is handled by normalizing that over all classes.
         """
         prob = self.decision_function(X)
-        expit(prob, out=prob)
+#        expit(prob, out=prob)
     #    if prob.ndim == 1:
  #           return np.vstack([1 - prob, prob]).T
   #      else:
