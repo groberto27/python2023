@@ -9,8 +9,9 @@ header=st.container()
 features=st.container()
 
 with header:
-    st.title ("Welcome to Genesis' LinkedIn user predictor")
-    st.text ("In this website, you will be provide your input and we will predict if you use LinkedIn or not")
+    st.title ("Do you use LinkedIn?")
+    st.subtitle ("Please provide some general information about yourself and we will predict if you're a LinkedIn user or not")
+    st.text ("***All information collected is purely for educational purposes***")
     ss=pd.read_csv("ss.csv")
     ss = ss.dropna()
 
