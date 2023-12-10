@@ -120,7 +120,7 @@ else:
     parent = 1
            
 #Age
-Age = st.number_input(label="What is your age", 
+age = st.number_input(label="What is your age", 
            min_value=18,
            max_value=98,
            value=45,placeholder="type a number...")
@@ -137,3 +137,4 @@ probs = lr.predict_proba([person])
 
 ##Print predicted probability
 st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
+
