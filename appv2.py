@@ -55,24 +55,24 @@ Income = st.selectbox("Income",
                         "75 to under $100,000",
                         "100 to under $150,000",
                         "$150,000 +"])
-if income == 1:
-    inc_label = "Less than $10,000"
-elif income == 2:
-    inc_label = "10 to under $20,000"
-elif income == 3:
-    inc_label = "20 to under $30,000"
-elif income == 4:
-    inc_label = "30 to under $40,000"    
-elif income == 5:
-    inc_label = "40 to under $50,000"  
-elif income == 6:
-    inc_label = "50 to under $75,000"
-elif income == 7:
-    inc_label = "75 to under $100,000"  
-elif income == 8:
-    inc_label = "100 to under $150,000"      
+if income == "Less than $10,000":
+    inc_label = 1
+elif income == "10 to under $20,000":
+    inc_label = 2
+elif income == "20 to under $30,000":
+    inc_label = 3
+elif income == "30 to under $40,000":
+    inc_label = 4   
+elif income == "40 to under $50,000":
+    inc_label = 5  
+elif income == "50 to under $75,000":
+    inc_label = 6
+elif income == "75 to under $100,000":
+    inc_label = 7
+elif income == "100 to under $150,000":
+    inc_label = 8    
 else:
-    inc_label = "$150,000 +" 
+    income  = 9 
 
 # Education
 education = st.selectbox("Education level", 
