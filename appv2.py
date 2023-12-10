@@ -92,7 +92,6 @@ elif education == "Some post-graduate or professional schooling":
 else:
     education = 8
 
-marital=st.number_input('What is your current marital status',1,6)
 parent=st.slider('Do you have children',0,1)
 gender=st.slider('Gender',0,1)
 age=st.slider('What is age',0,98)
@@ -121,10 +120,13 @@ else:
     marital = 6
 
 #Parent
-parent = st.slider(label="Are you a parent of a child under 18 living in your home? (0 Yes, 1 No)", 
-           min_value=0,
-           max_value=1,
-           value=1)
+parent = st.radio(label="Do you have children?", 
+                  options=["No", "Yes"])
+if parent == "No":
+   parent = 0
+else:
+    parent = 1
+           
 
 #Gender
 gender = st.slider(label="Gender (0 male, 1 female)", 
