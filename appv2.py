@@ -132,10 +132,8 @@ age = st.number_input(label="What is your age",
 person = [{income}, {education}, {parent}, {marital},{gender},{age}]
 
 ##Generate probability of positive class (=1)
-with warnings.catch_warnings():
-probs = lr.predict_proba([person])
- warnings.filterwarnings("ignore")
+#probs = lr.predict_proba([person])
 
 ##Print predicted probability
-st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
+#st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
 
