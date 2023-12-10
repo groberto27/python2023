@@ -92,11 +92,6 @@ elif education == "Some post-graduate or professional schooling":
 else:
     education = 8
 
-parent=st.slider('Do you have children',0,1)
-gender=st.slider('Gender',0,1)
-age=st.slider('What is age',0,98)
-
-
 # Marital
 marital = st.selectbox("Marital status?", 
              options = ["Married",
@@ -129,16 +124,18 @@ else:
            
 
 #Gender
-gender = st.slider(label="Gender (0 male, 1 female)", 
-           min_value=0,
-           max_value=1,
-           value=1)
-
+gender = st.radio(label="What is your gender", 
+                  options=["Male", "Female"])
+if gender == "Male":
+   parent = 0
+else:
+    parent = 1
+           
 #Age
-Age = st.slider(label="Age", 
+Age = st.number_input(label="What is your age", 
            min_value=18,
            max_value=98,
-           value=45)
+           value=45,placeholder="type a number...")
 
 
 
