@@ -11,7 +11,7 @@ st.image('li.jpg',caption="Image Source: LinkedIn")
 
 with header:
     st.header ("Do you use LinkedIn?")
-    st.subheader ("Please provide some general information about yourself and we will predict if you're a LinkedIn user or not")
+    st.subheader ("Let's predict if you're a LinkedIn user or not!")
     st.text ("***All information collected is purely for educational purposes***")
 
   
