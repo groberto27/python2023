@@ -9,13 +9,16 @@ header=st.container()
 features=st.container()
 st.image('li.jpg',caption="Image Source: LinkedIn")
 
-
-
-
-with header:
-    st.header ("</h1> style='text-align: center; color: grey;'>Do you use LinkedIn?</h1>",unsafe_allow_html=True)
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write(' ')
+with col2:
+    st.header ("Do you use LinkedIn?")
     st.subheader ("Please provide some general information about yourself and we will predict if you're a LinkedIn user or not")
     st.text ("***All information collected is purely for educational purposes***")
+with col3:
+    st.write(' ')
+
     ss=pd.read_csv("ss.csv")
     ss = ss.dropna()
 
