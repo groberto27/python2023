@@ -19,8 +19,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-<h1 align="center">Centered Heading1</h1>
-
 
 st.markdown(
     """
@@ -31,6 +29,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 with header:
     st.header ("Do you use LinkedIn?")
     st.subheader ("Let's predict if you're a user or not!")
