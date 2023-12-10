@@ -14,18 +14,6 @@ with header:
     ss=pd.read_csv("ss.csv")
     ss = ss.dropna()
 
-
-
-with features: 
-    st.header ('The following are information that you enter into the predictor')
-
-    st.markdown ("- Income    (1-9) - Between $0 to +$150k")  
-    st.markdown("- Education (1-8) - Highest level of school/ degree completed")   
-    st.markdown( "- Parent          - Yes or No")  
-    st.markdown("- Marital  (0-5)  - Current marital status")  
-    st.markdown("- Gender          - Male or Female")   
-    st.markdown("- Age             - Current age")
-
     
 #from dataframe ss: y as sm_li; x as income, education, parent, marital, gender, age
 y = ss["sm_li"]
