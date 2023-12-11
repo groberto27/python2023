@@ -165,7 +165,7 @@ newdata = pd.DataFrame({
     "education":  [{education}],     #between 1  to 8
     "parent":     [{parent}],     #binary 0, 1
     "marital":    [{marital}],     #binary 0, 1
-    "gender"}:     [{gender}],     #binary 0, 1
+    "gender":     [{gender}],     #binary 0, 1
     "age":        [{age}],   #continuous through 98
 })
 
