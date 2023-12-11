@@ -162,9 +162,10 @@ def lr(input_data):
     input_data_as_numpy_array = np.asarray(input_data)
 
 #Making predictions 
+input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
 
-##Predict class, given input features
-pred_class = lr.predict([input_data])
+#Predict class, given input features
+predicated_class = lr.predict([input_data])
 
 ##Generate probability of positive class (=1)
 probs = lr.predict_proba([input_data])
