@@ -160,33 +160,23 @@ age = st.number_input(label="What is your age",
 
 #Making predictions 
 # New data for predictions
-#newdata = pd.DataFrame({
- #   "income":     [],     #between 1  to 9
-#    "education":  [],     #between 1  to 8
-#    "parent":     [],     #binary 0, 1
-#    "marital":    [],     #binary 0, 1
-#    "gender":     [],     #binary 0, 1
-#    "age":        [],   #continuous through 98
-#})
+newdata = pd.DataFrame({
+    "income":     [],     #between 1  to 9
+    "education":  [],     #between 1  to 8
+    "parent":     [],     #binary 0, 1
+    "marital":    [],     #binary 0, 1
+    "gender":     [],     #binary 0, 1
+    "age":        [],   #continuous through 98
+})
 
 # Use model to make predictions
-#newdata["prediction_sm_li"] = lr.predict(newdata)
-
-
-##Print predicted probability
-#st.write(f"You have a probability of {probs[0][1]} being a LinkedIn user")
-  #  def _predict_proba_lr(self, X):
- #       """Probability estimation for OvR logistic regression.
-
-#        Positive class probabilities are computed as
-#        1. / (1. + np.exp(-self.decision_function(X)));
- #       multiclass is handled by normalizing that over all classes.
-#        """
-#        prob = self.decision_function(X)
-#        expit(prob, out=prob)
-    #    if prob.ndim == 1:
- #           return np.vstack([1 - prob, prob]).T
-  #      else:
-   #         # OvR normalization, like LibLinear's predict_probability
-   #         prob /= prob.sum(axis=1).reshape((prob.shape[0], -1))
-    #        return prob
+# New data for predictions
+newdata = pd.DataFrame({
+    "income":    [6],     #between 1  to 9
+    "education": [8],     #between 1  to 8
+    "parent":    [1],     #binary 0, 1
+    "marital":   [1],     #binary 0, 1
+    "gender":    [0],     #binary 0, 1
+    "age":       [40],   #continuous through 98
+})
+newdata
