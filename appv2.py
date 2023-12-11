@@ -158,8 +158,8 @@ age = st.number_input(label="What is your age",
 
 # Creating a function for prediction
 def lr(input_data):
-  input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
- input_data_as_numpy_array = np.asarray(input_data)
+    input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
+    input_data_as_numpy_array = np.asarray(input_data)
 
 #Making predictions 
 # New data for predictions
