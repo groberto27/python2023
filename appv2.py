@@ -161,10 +161,20 @@ age = st.number_input(label="What is your age",
 #Making predictions 
 # New data for predictions
 newdata = pd.DataFrame({
-    "income":     [],     #between 1  to 9
-    "education":  [],     #between 1  to 8
-    "parent":     [],     #binary 0, 1
-    "marital":    [],     #binary 0, 1
-    "gender":     [],     #binary 0, 1
-    "age":        [],   #continuous through 98
+    {income}:     [],     #between 1  to 9
+    {education}:  [{education}],     #between 1  to 8
+    {parent}:     [{parent}],     #binary 0, 1
+    {marital}:    [],     #binary 0, 1
+    {gender}:     [],     #binary 0, 1
+    {age}:        [],   #continuous through 98
 })
+
+newdata["prediction_sm_li"] = sample.predict(newdata)
+
+person = [{income}, {education}, 0, 0,1,45]
+
+##Predict class, given input features
+predicted_class = lr.predict([person])
+
+##Generate probability of positive class (=1)
+probs = lr.predict_proba([person])
