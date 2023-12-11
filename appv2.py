@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 
 header=st.container()
 features=st.container()
-st.image('li.jpg',caption="Image Source: LinkedIn",width=300)
+st.image('li.jpg',caption="Image Source: LinkedIn",width=700)
 
 st.markdown(
     """
@@ -37,6 +37,7 @@ with header:
         """,
         unsafe_allow_html=True
     )
+ 
 
 def get_data():
     ss=pd.read_csv("ss.csv")
