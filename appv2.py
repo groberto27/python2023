@@ -168,15 +168,3 @@ newdata = pd.DataFrame({
     "gender":     [],     #binary 0, 1
     "age":        [],   #continuous through 98
 })
-
-# Use model to make predictions
-# New data for predictions
-newdata = pd.DataFrame({
-    "income":    [6],     #between 1  to 9
-    "education": [8],     #between 1  to 8
-    "parent":    [1],     #binary 0, 1
-    "marital":   [1],     #binary 0, 1
-    "gender":    [0],     #binary 0, 1
-    "age":       [40],   #continuous through 98
-})
-newdata
