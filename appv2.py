@@ -162,23 +162,6 @@ def lr(input_data):
     input_data_as_numpy_array = np.asarray(input_data)
 
 #Making predictions 
-# New data for predictions
-#newdata = pd.DataFrame({
-    "income":     [{income}],     #between 1  to 9
-    "education":  [{education}],     #between 1  to 8
-    "parent":     [{parent}],     #binary 0, 1
-    "marital":    [{marital}],     #binary 0, 1
-    "gender":     [{gender}],     #binary 0, 1
-    "age":        [{age}],   #continuous through 98
-#})
-
-newdata["prediction_sm_li"] = lr.predict(newdata)
-
-
-#Making predictions 
-##New data for features: age, college, high_income, ideology
-
-
 
 ##Predict class, given input features
 predicted_class = lr.predict([person])
@@ -196,3 +179,7 @@ else:
 #predicted probability 
 with st.sidebar:
      prob_label = ({probs[0][1]})
+
+# Print predicted class and probability
+st.write(f"Predicted class: {predicted_class[0]}")
+st.write(f"Probability that this person is pro-environment: {probs[0][1]}")
