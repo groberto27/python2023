@@ -164,10 +164,10 @@ def lr(input_data):
 #Making predictions 
 
 ##Predict class, given input features
-predicted_class = lr.predict([person])
+predicted_class = lr.predict([input_data])
 
 ##Generate probability of positive class (=1)
-probs = lr.predict_proba([person])
+probs = lr.predict_proba([input_data])
 
 
 # predicted class
