@@ -165,7 +165,7 @@ def lr(input_data):
 input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
 
 #Predict class, given input features
-predicated_class = lr.predict([input_data])
+# predicated_class = lr.predict([input_data])
 
 ##Generate probability of positive class (=1)
 probs = lr.predict_proba([input_data])
