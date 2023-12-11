@@ -164,14 +164,14 @@ def lr(input_data):
 #Making predictions 
 
 ##Predict class, given input features
-predicted_class = lr.predict([input_data])
+pred_class = lr.predict([input_data])
 
 ##Generate probability of positive class (=1)
 probs = lr.predict_proba([input_data])
 
 
 # predicted class
-if predicted_class == 0:
+if pred_class == 0:
     pred_class_label = "Do not use LinkedIn"
 else:
     pred_class_label = "Use LinkedIn" 
