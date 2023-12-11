@@ -185,7 +185,7 @@ probs = lr.predict_proba([person])
 
 
 # predicted class
-if pred_class = 0:
+if predicted_class = 0:
     pred_class_label = "Do not use LinkedIn"
 else:
     pred_class_label = "Use LinkedIn" 
