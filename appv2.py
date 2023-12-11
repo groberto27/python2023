@@ -169,7 +169,7 @@ newdata = pd.DataFrame({
     "age":        [{age}],   #continuous through 98
 })
 
-newdata["prediction_sm_li"] = sample.predict(newdata)
+newdata["prediction_sm_li"] = X.predict(newdata)
 
 person = [{income}, {education}, 0, 0,1,45]
 
