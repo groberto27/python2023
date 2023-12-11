@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 
 header=st.container()
 features=st.container()
-st.image('li.jpg',caption="Image Source: LinkedIn")
+st.image('li.jpg',caption="Image Source: LinkedIn",width=2)
 
 st.markdown(
     """
