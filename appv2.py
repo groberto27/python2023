@@ -54,7 +54,7 @@ lr.fit(X,y)
 y_pred = lr.predict(X)
 
 # Income
-income = st.selectbox("Current income level", 
+income = st.selectbox("What is your current income level?", 
              options = ["Less than $10,000",
                        "$10,000 - $20,000",
                         "$20,000 - $30,000",
@@ -143,7 +143,7 @@ else:
            
 
 #Gender
-gender = st.radio(label="What is your gender", 
+gender = st.radio(label="Gender", 
                   options=["Male", "Female"])
 if gender == "Male":
    parent = 0
@@ -151,7 +151,7 @@ else:
     parent = 1
            
 #Age
-age = st.number_input(label="What is your age", 
+age = st.number_input(label="What is your age?", 
            min_value=18,
            max_value=98,
            value=45,placeholder="type a number...")
@@ -163,14 +163,14 @@ def lr(input_data):
 
 #Making predictions 
 # New data for predictions
-newdata = pd.DataFrame({
+#newdata = pd.DataFrame({
     "income":     [{income}],     #between 1  to 9
     "education":  [{education}],     #between 1  to 8
     "parent":     [{parent}],     #binary 0, 1
     "marital":    [{marital}],     #binary 0, 1
     "gender":     [{gender}],     #binary 0, 1
     "age":        [{age}],   #continuous through 98
-})
+#})
 
 newdata["prediction_sm_li"] = lr.predict(newdata)
 
@@ -195,4 +195,4 @@ else:
 
 #predicted probability 
 with st.sidebar:
-     prob_label = st.code({probs[0][1]})
+     prob_label = ({probs[0][1]})
