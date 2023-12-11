@@ -169,12 +169,23 @@ newdata = pd.DataFrame({
     "age":        [{age}],   #continuous through 98
 })
 
-newdata["prediction_sm_li"] = X.predict(newdata)
+newdata["prediction_sm_li"] = lr.predict(newdata)
 
-person = [{income}, {education}, 0, 0,1,45]
+
+
+#Making predictions 
+##New data for features: age, college, high_income, ideology
+person = [{income}, {education},{parent}, {marital},{gender},{age}]
 
 ##Predict class, given input features
 predicted_class = lr.predict([person])
 
 ##Generate probability of positive class (=1)
 probs = lr.predict_proba([person])
+
+
+# predicted class
+if pred_class = 0:
+    pred_class_label = "Do not use LinkedIn"
+else:
+    pred_class_label = "Use LinkedIn" 
