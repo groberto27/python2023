@@ -133,29 +133,26 @@ elif marital == "Widowed":
 else:
     marital = 6
 
-col1, col2 = st.columns(2)
-with col1:
+
 #Parent
-    parent = st.radio(label="Do you have children?", 
+parent = st.radio(label="Do you have children?", 
                   options=["No", "Yes"])
-    if parent == "No":
-        parent = 0
-    else:
-        parent = 1
+if parent == "No":
+    parent = 0
+else:
+    parent = 1
            
 
-with col2:
+
 #Gender
-    gender = st.radio(label="Gender", 
+gender = st.radio(label="Gender", 
                   options=["Male", "Female"])
-    if gender == "Male":
-   parent = 0
-    else:
+if gender == "Male":
+    parent = 0
+else:
     parent = 1
 
-
-
-           
+         
 #Age
 age = st.number_input(label="What is your age?", 
            min_value=18,
