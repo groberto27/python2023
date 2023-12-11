@@ -49,7 +49,7 @@ ss= get_data()
 
 y = ss["sm_li"]
 X = ss[["income", "education", "parent", "marital","gender","age"]]
-lr= LogisticRegression(class_weight="balanced").fit(X,y)
+lr= LogisticRegression()
 lr.fit(X,y)
 y_pred = lr.predict(X)
 
