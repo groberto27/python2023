@@ -146,7 +146,7 @@ else:
 #Gender
 gender = st.radio(label="Gender", 
                   options=["Male", "Female"])
-if gender = "Male":
+if gender == "Male":
     parent = 0
 else:
     parent = 1
