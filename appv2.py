@@ -163,13 +163,13 @@ age = st.number_input(label="What is your age?",
            min_value=18,
            max_value=98)
 
-person1 = np.array([{income},{education},{marital},{parent},{gender},{age}])
+person1 =  np.array([income,education,marital,parent,gender,age])
 person1
 
 
 #Making predictions 
 if st.button ('Make Prediction'):
-    person = np.array([{income},{education},{marital},{parent},{gender},{age}])
+    person =  np.array([income,education,marital,parent,gender,age])
     predicted_class = lr.predict([person])
     probs = lr.predict_proba([person])
     st.write(f"Predicted class: {predicted_class[0]}") # 0=Doesn't use LinkedIn, 1=Uses LinkedIN
