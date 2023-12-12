@@ -164,9 +164,6 @@ input_data
 
 #Making predictions 
 if st.button ('Make Prediction'):
-    try:
-        input_value = float(input_data)
-    prediction=lr.predict([[input_value]])[0]
-st.write(f'Prediction:{prediction}')
-   except ValueError:
-        st.write('Please enter a valid numerical value.')
+    input_array = np.array(float(user_input)).reshape(1, -1)
+    prediction = model.predict(input_array)[0]
+    st.write(f'Prediction: {prediction}')
