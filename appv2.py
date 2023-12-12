@@ -166,6 +166,6 @@ input_data
 if st.button ('Make Prediction'):
     try:
         input_value = float(input_data)
-    prediction=lr.predict(input_array)[0]
+    prediction=lr.predict([[input_value]])[0]
 st.write(f'Prediction:{prediction}')
 
