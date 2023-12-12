@@ -158,12 +158,12 @@ age = st.number_input(label="What is your age?",
            max_value=98,
            value=45,placeholder="type a number...")
 
-input_data = [{income},{education},{marital},{parent},{gender},{age}]
+
 input_data
 
 
 #Making predictions 
 if st.button ('Make Prediction'):
-    input_array = input_data
-    prediction = lr.predict(input_array)[0]
+    input_data = [{income},{education},{marital},{parent},{gender},{age}]
+    prediction = lr.predict(input_data)
     st.write(f'Prediction: {prediction}')
