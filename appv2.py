@@ -54,7 +54,7 @@ X = ss[["income", "education", "parent", "marital","gender","age"]]
 X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     stratify=y,       # same number of target in training & test set
                                                     test_size=0.2,    # hold out 20% of data for testing
-                                                    random_state=987) # set for reproducibility
+                                                    random_state=680) 
 lr = LogisticRegression(class_weight='balanced').fit(X_train, y_train)
 lr.fit=(X_train, y_train)
 y_pred = lr.predict(X_test)
