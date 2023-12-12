@@ -164,6 +164,10 @@ input_data
 
 #Making predictions 
 if st.button ('Make Prediction'):
-    input_data = [{income},{education},{marital},{parent},{gender},{age}]
-    prediction = lr.predict(input_data)[1]
-    st.write(f'Prediction: {prediction}')
+    person = [{income},{education},{marital},{parent},{gender},{age}]
+    predicted_class = lr.predict([person])
+    probs = lr.predict_proba([person])
+    prediction = lr.predict(input_data)[0]
+    st.write(f"Predicted class: {predicted_class[0]}") # 0=Doesn't use LinkedIn, 1=Uses LinkedIN
+    st.write(f"Probability that this person is LinkedIn user: {probs[0][1]}")
+
