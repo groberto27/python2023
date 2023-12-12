@@ -165,5 +165,5 @@ input_data
 #Making predictions 
 if st.button ('Make Prediction'):
     input_array = input_data
-    prediction = model.predict(input_array)[0]
+    prediction = lr.predict(input_array)[0]
     st.write(f'Prediction: {prediction}')
