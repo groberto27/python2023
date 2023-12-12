@@ -165,5 +165,5 @@ input_data
 #Making predictions 
 if st.button ('Make Prediction'):
     input_data = [{income},{education},{marital},{parent},{gender},{age}]
-    prediction = lr.predict(input_data)
+    prediction = lr.predict(input_data)[0]
     st.write(f'Prediction: {prediction}')
