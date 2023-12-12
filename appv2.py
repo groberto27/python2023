@@ -159,24 +159,16 @@ age = st.number_input(label="What is your age?",
            max_value=98,
            value=45,placeholder="type a number...")
 
-# Creating a function for prediction
-def lr(input_data):
-    input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
-    input_data_as_numpy_array = np.asarray(input_data)
-
-lr= LogisticRegression()
-lr.fit(X,y)
-y_pred = lr.predict(X)
+input_data = st.number.input [{income}, {education},{parent}, {marital},{gender},{age}]
 
 #Making predictions 
 input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
 
 #Predict class, given input features
-# predicated_class = lr.predict([input_data])
+# predicated_class = lr.predict([[input_data]])[0]
 
 ##Generate probability of positive class (=1)
-probs = lr.predict_proba([input_data])
-
+probs = lr.predict_proba([[input_data]])
 
 # predicted class
 if pred_class == 0:
