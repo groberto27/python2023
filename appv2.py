@@ -169,7 +169,7 @@ if st.button ('Make Prediction'):
     predicted_class = lr.predict([person])
     probs = lr.predict_proba([person])
     st.write(f"Predicted class: {predicted_class[0]}")
-    st.write(f"Predicted class definition: 0 = Non-user | 1 = User") 
-    st.write(f"The probability that you're a  LinkedIn user is: ({probs[0][1]}")
+    st.write(f"_Predicted class definition: 0 = Non-user | 1 = User_") 
+    st.write(f"The probability that you're a  LinkedIn user is: **{probs[0][1]}** : sunglasses")
 
 
