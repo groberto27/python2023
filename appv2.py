@@ -49,8 +49,13 @@ ss= get_data()
 
 y = ss["sm_li"]
 X = ss[["income", "education", "parent", "marital","gender","age"]]
-lr= LogisticRegression().fit(X,y)
-lr.fit(X,y)
+#Train / test split
+X_train, X_test, y_train, y_test = train_test_split(X,y,
+                                                    stratify=y,       # same number of target in training & test set
+                                                    test_size=0.2,    # hold out 20% of data for testing
+                                                    random_state=987) # set for reproducibility
+lr = LogisticRegression(class_weight='balanced').fit(X_train, y_train)
+lr.fit=(X_train, y_train)
 
 # Income
 income = st.selectbox("What is your current income level?", 
