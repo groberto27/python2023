@@ -159,27 +159,11 @@ age = st.number_input(label="What is your age?",
            max_value=98,
            value=45,placeholder="type a number...")
 
-input_data = st.number.input [[{income}, {education},{parent}, {marital},{gender},{age}]]
+input_data = st.text.input [{income}, {education},{parent}, {marital},{gender},{age}]
 
 #Making predictions 
-input_data = [{income}, {education},{parent}, {marital},{gender},{age}]
+if st.button ('Make Prediction'):
+    input_array = np.array(float(input_data)).reshape(1,-1)
+    prediction=lr.predict(input_array)[0]
+st.write(f'Prediction:{prediction}')
 
-#Predict class, given input features
-# predicated_class = lr.predict([[input_data]])[0]
-
-##Generate probability of positive class (=1)
-probs = lr.predict_proba([[input_data]])
-
-# predicted class
-if pred_class == 0:
-    pred_class_label = "Do not use LinkedIn"
-else:
-    pred_class_label = "Use LinkedIn" 
-
-#predicted probability 
-with st.sidebar:
-     prob_label = ({probs[0][1]})
-
-# Print predicted class and probability
-st.write(f"Predicted class: {predicted_class[0]}")
-st.write(f"Probability that this person is pro-environment: {probs[0][1]}")
