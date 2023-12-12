@@ -165,5 +165,5 @@ input_data
 #Making predictions 
 if st.button ('Make Prediction'):
     input_array = np.array(float(input_data)).reshape(1, -1)
-    prediction = model.predict(input_data)[0]
+    prediction = model.predict(input_array)[0]
     st.write(f'Prediction: {prediction}')
