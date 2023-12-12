@@ -54,7 +54,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     stratify=y,       # same number of target in training & test set
                                                     test_size=0.2,    # hold out 20% of data for testing
                                                     random_state=987) # set for reproducibility
-lr = LogisticRegression()
+lr = LogisticRegression().fit(X_train,y_train)
 lr.fit=(X_train, y_train)
 y_pred = lr.predict(X_test)
 
