@@ -161,8 +161,7 @@ else:
 #Age
 age = st.number_input(label="What is your age?", 
            min_value=18,
-           max_value=98,
-           value=45)
+           max_value=98)
 
 
 #Making predictions 
