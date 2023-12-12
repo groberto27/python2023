@@ -168,4 +168,5 @@ if st.button ('Make Prediction'):
         input_value = float(input_data)
     prediction=lr.predict([[input_value]])[0]
 st.write(f'Prediction:{prediction}')
-
+   except ValueError:
+        st.write('Please enter a valid numerical value.')
