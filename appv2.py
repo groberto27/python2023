@@ -171,5 +171,5 @@ if st.button ('Make Prediction'):
 
     
     #st.write(f"Predicted class: {predicted_class[0]} 0=Doesn't use LinkedIn, 1=Uses LinkedIN") 
-    #st.write(f**"The probability that you're a  LinkedIn user is: {probs[0][1]}"**)
+    #st.write(f"The probability that you're a  LinkedIn user is: {probs[0][1]}")
 
