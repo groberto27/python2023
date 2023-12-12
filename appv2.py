@@ -164,7 +164,7 @@ age = st.number_input(label="What is your age?",
            max_value=98)
 
 #Making predictions button
-if st.button ('Make Prediction'):
+if st.button ('**Click for Prediction**'):
     person =  np.array([income,education,marital,parent,gender,age])
     predicted_class = lr.predict([person])
     probs = lr.predict_proba([person])
