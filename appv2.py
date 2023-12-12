@@ -168,13 +168,6 @@ if st.button ('Make Prediction'):
     person =  np.array([income,education,marital,parent,gender,age])
     predicted_class = lr.predict([person])
     probs = lr.predict_proba([person])
-else:
-    ""
-
-#Show prediction results
-
-
-    
-    #st.write(f"Predicted class: {predicted_class[0]} 0=Doesn't use LinkedIn, 1=Uses LinkedIN") 
-    #st.write(f"The probability that you're a  LinkedIn user is: {probs[0][1]}")
+    st.write(f"Predicted class: {predicted_class[0]} 0=Doesn't use LinkedIn, 1=Uses LinkedIN") 
+    st.write(f"The probability that you're a  LinkedIn user is: {probs[0][1]}")
 
