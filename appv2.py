@@ -159,8 +159,7 @@ age = st.number_input(label="What is your age?",
            max_value=98,
            value=45,placeholder="type a number...")
 
-input_data = st.text.input [{income}, {education},{parent}, {marital},{gender},{age}]
-
+input_data = st.text.input ([{income}, {education},{parent}, {marital},{gender},{age})
 #Making predictions 
 if st.button ('Make Prediction'):
     input_array = np.array(float(input_data)).reshape(1,-1)
