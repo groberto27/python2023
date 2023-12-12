@@ -154,9 +154,9 @@ else:
 gender = st.radio(label="Gender", 
                   options=["Male", "Female"])
 if gender == "Male":
-    parent = 0
+    gender = 0
 else:
-    parent = 1
+    gender = 1
     
 #Age
 age = st.number_input(label="What is your age?", 
