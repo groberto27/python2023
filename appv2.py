@@ -50,7 +50,7 @@ ss= get_data()
 
 y = ss["sm_li"]
 X = ss[["income", "education", "parent", "marital","gender","age"]]
-#Train / test split
+# Train / test split
 X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     stratify=y,       # same number of target in training & test set
                                                     test_size=0.2,    # hold out 20% of data for testing
