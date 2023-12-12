@@ -146,7 +146,7 @@ else:
 #Gender
 gender = st.radio(label="Gender", 
                   options=["Male", "Female"])
-if gender == "Male":
+if gender = "Male":
     parent = 0
 else:
     parent = 1
@@ -164,7 +164,8 @@ input_data
 
 #Making predictions 
 if st.button ('Make Prediction'):
-    input_array = np.array(float(input_data)).reshape(1,-1)
+    try:
+        input_value = float(input_data)
     prediction=lr.predict(input_array)[0]
 st.write(f'Prediction:{prediction}')
 
