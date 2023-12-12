@@ -158,7 +158,7 @@ age = st.number_input(label="What is your age?",
            max_value=98,
            value=45,placeholder="type a number...")
 
-input_data = st.text.input ({income})
+input_data = st.text.input [{"income"}]
 input_data
 
 
