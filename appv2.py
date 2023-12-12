@@ -163,6 +163,10 @@ age = st.number_input(label="What is your age?",
            min_value=18,
            max_value=98)
 
+person1 = np.array(float[{income},{education},{marital},{parent},{gender},{age})]).reshape(1,6)
+person1
+
+
 #Making predictions 
 if st.button ('Make Prediction'):
     person = np.array(float({income},{education},{marital},{parent},{gender},{age})).reshape(1,6)
