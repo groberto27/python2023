@@ -159,15 +159,11 @@ age = st.number_input(label="What is your age?",
            value=45,placeholder="type a number...")
 
 
-input_data
-
-
 #Making predictions 
 if st.button ('Make Prediction'):
     person = [{income},{education},{marital},{parent},{gender},{age}]
     predicted_class = lr.predict([person])
     probs = lr.predict_proba([person])
-    prediction = lr.predict(input_data)[0]
     st.write(f"Predicted class: {predicted_class[0]}") # 0=Doesn't use LinkedIn, 1=Uses LinkedIN
     st.write(f"Probability that this person is LinkedIn user: {probs[0][1]}")
 
