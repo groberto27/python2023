@@ -56,6 +56,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,
                                                     random_state=987) # set for reproducibility
 lr = LogisticRegression(class_weight='balanced').fit(X_train, y_train)
 lr.fit=(X_train, y_train)
+y_pred = lr.predict(X_test)
 
 # Income
 income = st.selectbox("What is your current income level?", 
